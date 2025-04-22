@@ -23,5 +23,16 @@ func main() {
 	fmt.Println("Before append - len:", len(intSlice2), "cap:", cap(intSlice2))
 
 	// Map:
+	var peopleAges = map[string]uint8{"Adam": 23, "Sara": 25}
+	var age, ok = peopleAges["Adam"]
+	if ok {
+		fmt.Printf("The age is %v.\n", age)
+	} else {
+		fmt.Println("Invalid name.")
+	}
 
+	// For loop
+	for name, age := range peopleAges {
+		fmt.Printf("Name: %v, Age: %v\n", name, age)
+	}
 }
